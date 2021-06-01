@@ -1,0 +1,4 @@
+SELECT min(ord_date) as first_order, max(ord_date) as last_order
+FROM orders
+JOIN customer ON customer.customer_id=orders.customer_id 
+WHERE customer.cust_name='samony';
